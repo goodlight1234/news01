@@ -127,6 +127,57 @@
             margin-left: auto;
             margin-right: auto;
         }
+  /* Post Navigation Styles */
+        .post-navigation {
+            display: flex;
+            flex-direction: column; /* 세로 정렬 */
+            gap: 10px; /* 링크 사이 간격 */
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .post-link {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #333;
+            font-size: 0.95em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .post-link:hover {
+            background-color: #e0e0e0;
+            color: #007bff;
+        }
+
+        .post-link .arrow {
+            font-size: 1.2em;
+            color: #007bff;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .post-link.prev {
+            justify-content: flex-start;
+        }
+
+        .post-link.next {
+            justify-content: flex-end;
+        }
+
+        .post-link.prev .arrow {
+            transform: none; /* ▲ 기본 방향 */
+            margin-left: -5px; /* 화살표가 더 붙도록 조정 */
+        }
+
+        .post-link.next .arrow {
+            transform: none; /* ▼ 기본 방향 */
+            margin-right: -5px; /* 화살표가 더 붙도록 조정 */
+        }
     </style>
 </head>
 <body>
@@ -163,7 +214,12 @@
             <p>최근 기후 시장과 기후 금융에서 가장 많은 관심을 받는 분야가 민간 시장인 VCM (자발적 탄소 배출권)입니다. 특히, 넷제로(Net-zero: 탄소중립), RE100 등을 선언하는 기업들이 늘어나면서 자발적 탄소 배출권 시장은 급증하고 있습니다. 회계 컨설팅 법인 맥킨지(McKinsey)에 따르면, VCM 시장은 지난해 대비 2030년까지 약 15배, 2050년에는 100배까지 빠르게 성장할 것으로 예상됩니다.</p>
         </div>
     </div>
-</div>
+   </div>
+    
+    <div class="post-navigation">
+        <a href="#" class="post-link prev"><span class="arrow">▲</span> 이전글 시노펙스, ENTECH 2025 전시에 수처리 필터 솔루션 출품!</a>
+        <a href="#" class="post-link next">다음글 시노펙스, 창립 40주년 맞아 ‘기술 기반 조직개편’ <span class="arrow">▼</span></a>
+    </div></div>
 
 </body>
 </html>
